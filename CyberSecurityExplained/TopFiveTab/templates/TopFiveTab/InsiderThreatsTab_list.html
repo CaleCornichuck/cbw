@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <title>Top Five - Insider Threats</title>
+        <link rel="stylesheet" href="{% static '/css/topfive.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+{% endblock %}
+
+{% block content %}
+    <body>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/TopFive">The Top Five</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'phishing' %}">Phishing</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'mal/ransomware' %}">Mal/Ransomware</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'insider threats' %}">Insider Threats</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'ddos' %}">DDOS</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'iot/sql' %}">SQL/IOT</a>
+        </div>
+
+        <a style="font-size:30px;cursor:pointer;margin-left:0;padding-top:10px" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+
+        <!--button class="collapsible">!Insider Threats</button>
+            <div class="colcontent"-->
+        <div class="InsiderThreats">
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                    <style>
+                    h3 {
+                        text-align: center;
+                    }
+                    </style>
+                    <br></br>
+                    <h3>What and Who are Insider Threats?</h3>
+                    </div>
+                    <div class="col">
+                       
+                    <div><img src="{% static 'images/insider5.jpg' %}"
+                        width= 450;
+                        height= 150;
+                        style="margin-bottom:10px;padding-bottom:10px;"
+                         >
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+            <p>Insider threats are individuals that have access to a computer system or 
+            network within a company and expose the company to malicious code. These 
+            individuals can knowingly exfiltrate data for personal gain or can be negligent
+            and expose the company to a hacker. These individuals do not have to be a current 
+            employee all they need is inside access to the company’s system or network. Not all 
+            individuals are careless or clueless some actually get tricked. Social engineering
+            attacks are when employees are manipulated and end up disclosing confidential information.
+            Which is then used maliciously to gain access to a companies system or network. 
+             
+            <p>Let’s look at some examples below of how Malicious and Negligent individuals 
+            can be insider threats.</p></p>                                      
+
+            <div class="InsiderThreatsTypes">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                                  
+                        <h5><b>Malicious Insiders</b></h5>
+                        <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">Malicious insiders are responsible for 14% of all incidents. </p>
+                        <ul>
+                            <li>The disgruntled insider decides to delete important data to get 
+                            revenge for maybe losing their job or not getting something, they wanted. </li> 
+                            <li>They sell data and information to other parties for money.</li> 
+                            <li>The insider gives data and information to another company for personal
+                             gain or money to help the company achieve more success.</li>
+                            <li>The insider exposes the company systems to malware that can spread and 
+                            cause damage out of revenge.</li> 
+                            <li>They can also physically steal hard drives to sell, leak, or use 
+                            for personal gain.</li>  
+                                            
+                            <div>
+                                <img src="{% static 'images/insider.jpg' %}"
+                                    width= 450;
+                                    height= 140; >
+                            </div>
+                        </ul>
+                        </div>
+                        <div class="col">
+                    
+                        <h5><b>Negligent Insiders</b></h5>
+                        <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:left">Negligent Insiders are responsible for 87% of all incidents. 
+                        25% of these incidents are related to physically stolen credentials or credentials accessed by phishing.
+                        62% of these incidents are when the negligent insider sends emails to the wrong person.</p>
+                   
+                        <ul>
+                            <li>This negligent insider can fail to secure a database properly. Then 
+                            exposing personal and private information of customers for anyone to see.</li> 
+                            <li>A current employee can fall for phishing attacks by clicking on emails 
+                            with malware. They can also receive a phone call from a hacker asking for 
+                            credentials or information to gain inside access to the company’s system 
+                            or network.</li> 
+                            <li>One simple and common mistake the insider can make is sending the wrong 
+                            person an email with private and personal information which can be used 
+                            or leaked for personal gain.</li> 
+                            <li>Another mistake is leaving a google drive open with private and personal 
+                            information for anyone with a link to access.</li>   
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+{% endblock %}
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

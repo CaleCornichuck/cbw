@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <title>Networks - Wireshark</title>
+        <link rel="stylesheet" href="{% static '/css/networks.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+{% endblock %}
+
+{% block content %}
+    <body>
+
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/Networks">Networks</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'wireshark' %}">Wireshark</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'wifipine' %}">WifiPineapple</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;padding-top:10px" class="text-success" onclick="openNav()">&#9776;</a>
+
+        <!--button class="collapsible">!Insider Threats</button>
+            <div class="colcontent"-->
+        <div class="Wireshark">
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                    <style>
+                    h3 {
+                        text-align: center;
+                    }
+                    </style>
+
+                    <h3>What is Wireshark?</h3>
+                        <p>Wireshark is a network packet capture tool that captures network packets. These packets are 
+                        shown on the granular scale and are used for offline analysis. This allows the user to look at 
+                        the network up close and dive into the network. When using Wireshark the user can capture, interpret, 
+                        filter, and inspect packets. Wireshark is used for troubleshooting networks with performance issues.</p>
+                        <div>
+                            <img src="{% static 'images/wireshark2.png' %}"
+                                width= 100%;
+                                height= 100%; >
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    <div>
+                            <img src="{% static 'images/wireshark.jpg' %}"
+                                width= 100%;
+                                height= 100%; >
+                    </div>
+                    <br>
+                    </br>
+                        <h3>How Wireshark works.</h3>
+                            <ul>
+                                <li>Packet capture   </li> 
+                                    <p>Wireshark watches the network in real time grabbing streams of network (thousands of packets at a time).</p>
+                                <li>Filtering </li> 
+                                    <p>Wireshark filters through these streams and obtains specified information.</p>
+                                <li>Visualization</li>  
+                                    <p>Wireshark allows the users to dive into the middle of a network packet and visualize an entire network stream.</p>         
+                            </ul>
+                        <h3>How can Wireshark help?</h3>
+                            <p>Wireshark can help find out if a router isn’t working correctly. If the user’s computer is slow Wireshark can dive into
+                            the packets and troubleshoot to find the issue. Wireshark can help with finding malicious activity, dropped packets, 
+                            and latency issues.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

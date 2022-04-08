@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {%block title%}
+        
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/opsec.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="/Cryptography">Cryptography</a>
+        
+            <a class="navlink" style="cursor:pointer" href="{% url 'hashcat' %}">Hashcat</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'john' %}">John-the-Ripper</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+        <div class="Cryptography">
+            <div class="title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            </br>
+                            <h5>Cryptography</h5>
+                            <br>
+                            <p>
+                                Cryptography is the study or act of securing data and communications. There are many ways to secure the data being sent, such as encryption, or algorithms.
+                            </p>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                Crpytography comes from the Greek word kryptos, which means hidden, or secret.
+                            </p>
+                            <br>
+                            <h5>Encryption</h5>
+                            <br>
+                            <p>
+                                Encryption is a very common way to secure data. When converting the data, cryptographers use a secret code to turn the data into something more secure. This makes it harder to decipher if the data falls into the wrong hands.
+                            </p>
+                            <div class="row">
+                                <div><img src="{% static 'images/Crypt1.png' %}"
+                                    width= 100%%;
+                                    height= 100%;/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div><img src="{% static 'images/Crypt2.jpg' %}"
+                                    width= 100%%;
+                                    height= 100%;/>
+                                </div>
+                            </div>
+                            <br>
+                            <h5>Ciphers</h5>
+                            <br>
+                            <p>
+                                Cryptographers most commonly use cryptographic algorithms to secure any messages that are being sent across communications, known as ciphers. There are many different
+                                kinds of ciphers that are used, each with their own purpose. These ciphers include:
+                            </p>
+                            <ul>
+                                <li>Hash Functions</li>
+                                <br>
+                                <li>Symmetric-key Algorithms</li>
+                                <br>
+                                <li>Asymmetric-key Algorithms</li>
+                                <br>
+                            </ul>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    {% endblock %}
+</body>
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

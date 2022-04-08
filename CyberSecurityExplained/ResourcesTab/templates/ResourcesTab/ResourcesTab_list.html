@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static '/css/homepage.css' %}">
+    </head>
+{% endblock %}
+
+{%block content%}
+    <body>
+        <div class="Networks">
+            <div class="title">
+                <div class="container">
+                    <div>
+                        <br><br>
+                        <h2>Additional Resources</h2>
+                    </div>
+                    <div class="row">
+                        <style>
+                            h2 {
+                            text-align: center;
+                        }
+                        </style>
+                        <div class="col">
+                            <br><br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                 Learning cybersecurity techniques can be daunting, but this site provides hundreds of lessons in practical practice on actual computer targets! 
+                                 To try this free online site, click the link! <a href="https://tryhackme.com/">TryHackMe!</a><br>
+                                 <img src="{% static 'images/TryHacker.jpg' %}"
+                                    width= 100%%;
+                                    height= 100%;
+                                    style="padding-top: 25px;"/> 
+                            </p>
+                            <br><br>
+                        </div>
+                        <div class="col">
+                            <br><br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                If you are ready to test your skills try out the National Cyber League competition. 
+                                This competition runs twice a year in fall and spring and comes with a gymnasium to learn and practice skills in!
+                                <a href="https://cyberskyline.com/events/ncl">National Cyber League!</a>
+                                <img src="{% static 'images/NCL.jpg' %}"
+                                   width= 100%%;
+                                   height= 100%;
+                                   style="padding-top: 10px;"/>
+                            </p>
+                            <br><br>
+                        </div>
+                        <div class="col">
+                            <br><br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                A more intermediate cybersecurity site, HackTheBox, is similar to TryHackMe but focused on providing practice targets instead of practice lessons.
+                                To try this free online site, click the link! <a href="https://www.hackthebox.com/">HackTheBox!</a><br>
+                                <img src="{% static 'images/HackBox.jpg' %}"
+                                   width= 100%%;
+                                   height= 100%;
+                                   style="padding-top: 35px;"/> 
+                           </p>
+                            <br><br>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+{% endblock %}

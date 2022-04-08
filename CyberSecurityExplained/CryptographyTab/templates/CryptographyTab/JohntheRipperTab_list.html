@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {%block title%}
+        
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/opsec.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/Cryptography">Cryptography</a>
+        
+            <a class="navlink" style="cursor:pointer;" href="{% url 'hashcat' %}">Hashcat</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'john' %}">John-the-Ripper</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+        <div class="Networks">
+            <div class="title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div><img src="{% static 'images/john.png' %}"
+                                    width= 100%%;
+                                    height= 100%;/>
+                                </div>
+                            </div>
+                            </br>
+                            <h5>John-the-Ripper</h5>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                John-the-Ripper is password testing and breaking program. It uses the CPU to crack the code, instead of GPU. While GPU is usable with John-the-Ripper,
+                                it is not as efficient as it's CPU methods.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <br>
+                            <h5>Modes of John-the-Ripper</h5>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                Like Hashcat, John-the-Ripper has many different modes for different situations. Some examples are:
+                            </p>
+                            <ul>
+                                <li>Single Crack Mode</li>
+                                <br>
+                                <p>
+                                    This mode uses info from UNIX files, such as full names and usernames. This is good when the password uses easily available info in the username.
+                                </p>
+                                <br>
+                                <li>Wordlist Mode</li>
+                                <br>
+                                <p>
+                                    Wordlist uses a text file, and iterates through each line as a password. This is very similar to the Dictionary Attack.
+                                </p>
+                                <br>
+                                <li>Incremental Mode</li>
+                                <br>
+                                <p>
+                                    This is John-the-Ripper's version of a brute-force attack. While it is good at cracking passwords, if the password is too complex, the process may never end.
+                                </p>
+                                <br>
+                            </ul>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    {% endblock %}
+</body>
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <title>Top Five - IOT/SQL</title>
+        <link rel="stylesheet" href="{% static '/css/topfive.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+{% endblock %}
+{% block content %}
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/TopFive">The Top Five</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'phishing' %}">Phishing</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'mal/ransomware' %}">Mal/Ransomware</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'insider threats' %}">Insider Threats</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'ddos' %}">DDOS</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'iot/sql' %}">SQL/IOT</a>
+        </div>
+
+        <a style="font-size:30px;cursor:pointer;margin-left:0;padding-top:10px" class="text-success" onclick="openNav()">&#9776;</a>
+        <br><br>
+
+        <div class="SQLTitle">
+            <style>
+                h3 {
+                    text-align: center;
+                }
+            </style>
+            <h3>SQL and IOT</h3>
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <img src="{% static 'images/SQL-image1.jpg' %}" ALIGN="left" style="padding-left: 20px; padding-right: 20px;"
+                            width= 30% 
+                            height= 150; 
+                        />
+                        <br>
+                        <p>The Structured Query Language, or SQL, is the standard language used to manage a database,
+                        it includes the commands to update, retrieve, remove and organize the data in a database.
+                        The data in a database is stored in relational tables, which are made from a series of rows and columns.
+                        As the size of a table or database grows it quickly becomes impossible to use without SQL.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div>
+                        <img src="{% static 'images/IOT-image1.jpg' %}" ALIGN="left" style="padding-left: 20px; padding-right: 20px;"
+                            width= 30% 
+                            height= 150; 
+                        />
+                        <br>
+                        <p>The Internet of Things, or IOT, refers to the physical objects around us that have some way of exchanging data.
+                        Examples of this would be smart devices that can be controlled remotely like security cameras set around a property,
+                        or a thermostat controlled from a phone. The current number of IOT devices has exceeded 12.3 billion as of 2021.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="phishingParagraph">
+            <div class="container">
+                <div class="row">
+                    <div class="col" >
+                        <h3>How is SQL used in cyberattacks?</h3>
+                    </div>
+                    <div class="col" >
+                        <h3>How is IOT used in cyberattacks?</h3>
+                    </div>
+                </div>
+            </div>  
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col" >
+                        <p>One of the reasons SQL injection attacks are so common, is that many websites have user logins.
+                        This requires storing user credentials in a database and being able to access them reliably.
+                        </p>
+                        <br>
+                        <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:left">
+                        If the websites database is not configured correctly, any user of the website
+                        can enter SQL commands to the login or url. 
+                        </p>
+                        <br>
+                        <p>The login is already running an SQL command to verify if the input is a valid user in the database.
+                        The SQL code that the malicious actor injects changes the normal SQL command to alter it's intended function.
+                        </p>
+                        <br>
+                        <p>This alteration could make the SQL database return other users credentials or simply delete the entire database.
+                        SQL databases have the capability of security, by parameterising the possible commands allowed, 
+                        but most companies use outdated software and configurations.
+                        </p>
+                    </div>
+                    <div class="col" >
+                        <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:left">One of the main reasons IOT devices are a security risk is due to the complexity of the systems involved.
+                        Every one of the devices use network connections to receive and transmit data necessary to its function.
+                        Essentially, each one of these connections represent a possible area of attack to not just the owners, 
+                        but the companies managing the data.
+                        </p>
+                        <br>
+                        <p>IOT devices are particularly vulnerable to becoming bots in a botnet, 
+                        allowing the attacker to perform attacks such as DDOS. 
+                        Any device compromised in this way is not just liable to be involved in other attacks,
+                        but cannot be trusted to handle personal data.
+                        </p>
+                        <br>
+                        <p>When an IOT device is compromised it can be subject to Man-In-The-Middle attacks.
+                        These attacks work by intercepting messages between two parties, such as building security devices and the company that manages them.
+                        This could be used to silence or trigger alarms at will or even remotely hack a vehicle and drive it away.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+{% endblock %}
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

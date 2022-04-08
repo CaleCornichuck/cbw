@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {%block title%}
+        
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/opsec.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/OperationalSecurity">Operational Security</a>
+        
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'dirbuster' %}">Dirbuster</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'stegnography' %}">Steganography</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+        <div class="Networks">
+            <div class="title">
+                <div class="container">
+                    <div class="row">
+                        <style>
+                            h2 {
+                            text-align: center;
+                        }
+                        </style>
+                        <div class="col">
+                            <h2>Dirbuster</h2>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <br>
+                            <br>
+                            <div><img src="{% static 'images/DirBuster1.jpg' %}"
+                                width= 100%%;
+                                height= 100%;/>
+                            </div>
+                            <br>
+                            <br><br>
+                            <h5>Why is it useful?</h5>
+                            <br>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                Just like credentials are sometimes found within the source page of a website, there are often files and directories left accessible.
+                                Sometimes a developer will add an admin page as a quick bypass to edit the website but forget to secure it.
+                                Any information found in these are a potential vulnerability to the website.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <style>
+                                h5 {
+                                text-align: center;
+                            }
+                            </style>
+                            <br>
+                            <br>
+                            <h5>What is Dirbuster?</h5>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                Dirbuster is a web application tool designed to brute force directory and file names.
+                                In other words, this tool tries every variation of possible extensions for a website from a chosen wordlist.
+                            </p>
+                            <br>
+                            <p>
+                                This tool is multi-threaded and works over http and https, and includes custom file extensions to try.
+
+                            </p>
+                            <br><br>
+                            <br>
+                            <div><img src="{% static 'images/DirBuster2.png' %}"
+                                width= 100%%;
+                                height= 100%;/>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    {% endblock %}
+</body>
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

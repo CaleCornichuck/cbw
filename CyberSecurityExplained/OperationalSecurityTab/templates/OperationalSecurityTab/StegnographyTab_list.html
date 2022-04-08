@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {%block title%}
+        
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/opsec.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="/OperationalSecurity">Operational Security</a>
+        
+            <a class="navlink" style="cursor:pointer" href="{% url 'dirbuster' %}">Dirbuster</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'stegnography' %}">Steganography</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+        <div class="Networks">
+            <div class="title">
+                <div class="container">
+                    <div class="row">
+                        <style>
+                            h2 {
+                            text-align: center;
+                        }
+                        </style>
+                        <div class="col">
+                            <h2>Steganography</h2>
+                            <br><br>
+                            <p style>
+                                Steganography is the practice of concealing data, or some form of message, by embedding it behind other text or images. 
+                                While this may sound similar to cryptography it remains an entirely different science and is particularly devious as it requires no encryption or encoding.
+                                In general, the medium in which our message is encoded consists of bits, some of which are redundant to the composition of it. 
+                                These redundant bits can be repurposed to hold new data, thereby hiding our actual message. 
+                                The trick to this is doing so without deforming the medium and revealing it was tampered with.
+                            </p>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                Additionally, every photo contains meta-data which are various details encoded into it automatically. 
+                                Typically, the time and location of when the photo was taken. This <a href="https://fotoforensics.com/">online tool</a> can show the meta-data of images.
+                            </p>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <br>
+                            <div><img src="{% static 'images/Steg1-encoded.png' %}"
+                                width= 100%%;
+                                height= 100%;/>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col">
+                            <style>
+                                h5 {
+                                text-align: center;
+                            }
+                            </style>
+                            <br>
+                            <h5>Try it out!</h5>
+                            <br>
+                            <p>
+                                 This image is an ideal cover for a hidden message! Who would suspect an innocent bunny? 
+                                 Try saving the image to your computer and uploading it to this online steganography <a href="https://www.pelock.com/products/steganography-online-codec">website tool</a>
+                            </p>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                This tool encodes the message into the image with a password of "Steg".
+                            </p>
+                            <br>
+                            <p>
+                                While Steganography and Cryptography are separate techniques they combine perfectly. 
+                                Not only can you encode a hidden message into text or images, you can take it one step further by encrypting it before embedding it.
+                                Try out this online <a href="https://cryptii.com/pipes/caesar-cipher">cryptography tool</a> along with the previous site!
+                            </p>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+    {% endblock %}
+</body>
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

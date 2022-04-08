@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}
+    <head>
+        <Title>Search</Title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static '/css/homepage.css' %}">
+    </head>
+{% endblock %}
+
+{%block content%}
+    <center>
+        {% if searched %}
+            <h1><br>You searched for {{ searched }}</h1>
+            <br>
+            {% for result in results %}
+                <a href="{{ result.link }}">{{ result.name }}</a><br>
+            {% endfor %}
+        {% else %}
+        <h1><br>You did not search for anything.</h1>
+        {% endif %}
+    </center>
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <title>Top Five - DDOS</title>
+        <link rel="stylesheet" href="{% static '/css/topfive.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+{% endblock %}
+
+{% block content %}
+    <body>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/TopFive">The Top Five</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'phishing' %}">Phishing</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'mal/ransomware' %}">Mal/Ransomware</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'insider threats' %}">Insider Threats</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'ddos' %}">DDOS</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'iot/sql' %}">SQL/IOT</a>
+        </div>
+
+        <a style="font-size:30px;cursor:pointer;margin-left:0;padding-top:10px" class="text-success" onclick="openNav()">&#9776;</a>
+        
+        
+        <div class="DDoS">
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+        
+                    <style>
+                    h3 {
+                        text-align: center;
+                    }
+                    </style>
+            
+                    <h3>Distributed Denial of service (DDoS)</h3>
+
+                    <p>The way DDoS works is when a cyber attack targets a server or network 
+                    to overwhelm and disrupt the normal operation. The attack floods the 
+                    system or networks with requests. This causes the site to shut down or 
+                    slow down so much the users cannot access. DDoS attacks can happen for 
+                    financial reasons, political reasons, revenge, or just for fun. Attacks 
+                    can happen to anyone at any time for any reason. The problem is that the 
+                    attacks are happening at all.</p>
+                    <br>
+                    </br>
+                    <div><img src="{% static 'images/DDoS6.jpg' %}"
+                        width= 100%%;
+                        height= 100%;/>
+                    </div>
+                    <br>
+                    </br>
+                    <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                    Internet of Things (IoT) is internet-connected objects, objects embedded with sensors, and objects that 
+                    can transfer and collect data over wireless networks. Some examples are connected appliances, Alexa, 
+                    smart cars, wearable health monitors, and smart home security.
+                    </p>
+
+                    <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                    A Botnet is an army of computers infected with malware to perform a DDoS attack. The Botnet is 
+                    controlled by the commander source.  </p>
+
+                    </div>
+                    <div class="col">
+                        <div><img src="{% static 'images/DDoS3.jpg' %}"
+                            width= 100%%;
+                            height= 100%;/>
+                        </div>
+           
+
+                        <style>
+                            h4 {
+                                text-align: center;
+                            }
+                        </style>
+                        <br>
+                        </br>
+                        <h4>Some famous DDoS attacks are:</h4>
+             
+
+                        <ul>
+                            <li>
+                            October 2020, Google posted a blog about an attack sourced out of many Chinese internet service 
+                            providers. This was the largest bandwidth attack of its time and lasted 6 months and peaked at 
+                            2.5 terabytes per second. 
+                            </li>
+                            <li>
+                            February 2020, Amazon Web Services was attacked by using a technique called Connectionless 
+                            Lightweight Directory Access Protocol (CLDAP) reflection. This increased the amount of data 
+                            sent to the infected sources IP address by relying on vulnerable third-party CLDAP serves. 
+                            This attack peaked at 2.3 terabytes per second and lasted for 3 days. This resulted in lose of 
+                            revenue and brand damage. 
+                            </li>
+                            <li>
+                            September 2016, Brain Kreb’s site was attacked by the Mirai botnet compromising 600,000 
+                            IoT devices. The largest hosing provider OVH in Europe was attacked by 145,000 bots at 1.1 
+                            terabytes per second lasting 7 days. This was not the last Mirai attack
+                            </li>
+
+                        </ul>   
+                   </div>
+                </div>
+            </div>
+        </div> 
+
+        <!button class="collapsible"><!/button>
+        <!div class="colcontent">
+        <br>
+        </br>
+        <h5>How to Protect against Mirai botnet attack.</h5>
+
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                    <br>
+                    </br>               
+                        <div><img src="{% static 'images/DDoS5.jpg' %}"
+                            width= 100%%;
+                            height= 100%;/>
+                        </div>
+                    <br>
+                    </br>
+                    </div>
+                    <div class="col">
+                    <br>
+                    </br>
+                       
+                        <style>
+                            h5 {
+                                text-align: center;
+                            }
+                        </style>
+                        <h5> 5 methods for mitigation.</h5>
+                  
+                        <ul> 
+                            <li>1.	Anomaly check (check for traffic performance)</li>
+                            <li>2.	Blacklist (all access except blacklist members) and whitelist (no access except whitelist members)</li>
+                            <li>3.	Authentication challenges (check if user is an actual person and not a robot)</li>
+                            <li>4.	Rate limiting (puts a cap on a repeated action) </li>
+                            <li>5.	Protocol and application checks </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        <!/div>
+        </div>
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

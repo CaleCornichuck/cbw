@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {%block title%}
+        
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/opsec.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="/OperationalSecurity">Operational Security</a>
+        
+            <a class="navlink" style="cursor:pointer" href="{% url 'dirbuster' %}">Dirbuster</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'stegnography' %}">Steganography</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+        <div class="Networks">
+            <div class="title">
+                <div class="container">
+                    <style>
+                        h3 {
+                            text-align: center;
+                        }
+                    </style>
+                    <div class="col">
+                        </br>
+                        <h3>Operational Security (OPSEC)</h3>
+                        <br>
+                    </div>
+                </div>
+                <div class="container">
+                    <style>
+                        h5 {
+                            text-align: center;
+                        }
+                    </style>
+                    <div class="row">
+                        <div class="col">
+                            </br>
+                            <h5>What is OPSEC?</h5>
+                            <br>
+                            <p>
+                                Operational security refers to controlling access to information, ensuring that nothing can compromise a system or reveal vulnerabilities.
+                                This could include information like what emails are associated with a website's users or access to proprietary designs or software.
+                            </p>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                In general, any information revealed can be used either individually or grouped together to access a vulnerability of an operation or system and compromise it.
+                            </p>
+                            <br>
+                            <p>
+                                Operational security was first coined as a term during the Vietnam War by the team of operation Purple Dragon. 
+                                The program, started by Admiral Ulysses Sharp, was tasked with investigating the failure of combat operations.
+                                Operational Security referred to a five step process created by the Purple Dragon team to be used on existing activities or the planning of new operations.
+                            </p>
+                            <br>
+                            <div class="row">
+                                <div><img src="{% static 'images/Opsec1.png' %}"
+                                    width= 100%%;
+                                    height= 100%;/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <br>
+                            <h5>The Five Steps of OPSEC</h5>
+                            <br>
+                            <ul> 
+                                <li>Identify Sensitive Data</li>
+                                    <br>
+                                    <p> 
+                                        Understanding the data used by an organization, how it is stored, and how sensitive it is.
+                                        This would include customer details, financial records, proprietary research or products, and contracted work.
+                                    </p> 
+                                    <br>
+                                <li>Identify Possible Threats</li>
+                                    <br>
+                                    <p> 
+                                        Once the sensitive data is identified it must be broken down into what actually poses a threat to the company.
+                                        This could be as simple as revealing cooperative business deals allowing competitors to poach the contracted work, or possibly patents being leaked by insider threats.
+                                    </p>
+                                    <br>
+                                <li>Analyze Vulnerabilities</li>
+                                    <br>
+                                    <p>
+                                        Assesing the processes and systems used to store or secure data, and the possible ways an attacker could utilize them. 
+                                        This could be a hacker using default credentials to access a database or someone physically entering a building to steal patent models. 
+                                    </p>
+                                    <br>
+                                <li>Determine Threat Level</li>
+                                    <br>
+                                    <p>
+                                        Each vulnerability found should be assessed for what level of threat it represents, ranked based on likelihood or potential damage.
+                                        Other considerations would include the amount of time or work to mitigate or resolve damage. 
+                                        Higher ranked threats will have more resources devoted to their prevention and recovery.
+                                    </p>
+                                    <br>
+                                <li>Devise Mitigation Plan</li>
+                                    <br>
+                                    <p>
+                                        Once the above steps have been taken, it becomes necessary to devise a plan to mitigate attacks or threats.
+                                        This would include actually implementing countermeasures to the threats. 
+                                        This could include replacing hardware, updating software, or requiring background checks on employees.
+                                    </p>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    {% endblock %}
+</body>
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {%block title%}
+        
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/networks.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+            <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="/Networks">Networks</a>
+        
+            <a class="navlink" style="cursor:pointer" href="{% url 'wireshark' %}">Wireshark</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'wifipine' %}">WifiPineapple</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+
+        <div class="Networks">
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        </br>
+                        <div><img src="{% static 'images/network2.png' %}"
+                                width= 100%%;
+                                height= 100%;/>
+                            </div>
+                        <br>
+                        </br>
+                        <h5>Network Security Attacks</h5>
+                            <p> 
+                            A network security attack is when any means are used by the attacker to maliciously compromise network security. 
+                            </p>
+                
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                            An active attack is when the attack is highly malicious. The attacker can change data in route or destroy data. 
+                            The attacker is detected by the users and is aggressive. The user can be locked out of the system.  
+                            </p>
+
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                            A passive attack is a network attack that is undetected. The attacked will look at information and 
+                            collect data.  
+                            </p>
+
+                    </div>
+                    <div class="col">
+                    <br>
+                    </br>
+                        <h5>Computer Network</h5>
+                            <p>A computer network is two or more computers that are connected to communicate data electronically. 
+                            An example of a computer network is the internet. 
+                            </p>
+                        
+                        <h5>Network Security</h5>
+                            <p>Network security is processes, polices, and practices that are designed to protect the 
+                            confidentially, integrity, and an accessibility of computer networks and data using both 
+                            software and hardware technologies.  
+                            </p> 
+
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                            One way the attacker can gain access is by guessing the password. Each password should be strong and complex to 
+                            avoid an attack. 
+                            </p>
+
+                            <div><img src="{% static 'images/network2.gif' %}"
+                                width= 100%%;
+                                height= 100%;/>
+                            </div>
+                   </div>
+                </div>
+            </div>
+        </div> 
+
+        <!button class="collapsible"><!/button>
+        <!div class="colcontent">
+        <br>
+        </br>
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        </br>
+                        <br>
+                        </br>
+                        <div><img src="{% static 'images/network3.jpg' %}"
+                            width= 100%%;
+                            height= 100%;/>
+                        </div>
+
+                        <br>
+                        </br>
+                    </div>
+                    <div class="col">
+
+                        <style>
+                            h5 {
+                                text-align: center;
+                            }
+                        </style>
+                        <h5>Network Security Components</h5>
+                  
+                            <ul> 
+                                <li>Hardware</li>
+                                    <p>Hardware devices can be set up as out of the path of the networks traffic which is 
+                                    separate from the networks traffic. This device then monitors traffic and alters users 
+                                    when they detect malicious threat. The hardware device can also be set up as in the 
+                                    path of networks traffic and directly blocks data the moment threats are detected. 
+                                    Firewall hardware blocks unwanted traffic from entering the systems in the first place.</p> 
+                                <li>Software</li>
+                                    <p>Software components are installed on computers and protect from internet threats. This 
+                                    second line of defense helps provide added protection.  
+                                    </p>
+                                <li>Cloud Services</li>
+                                    <p>Cloud services is like the in the path of the networks traffic. The networks traffic goes 
+                                    through the cloud provider and gets scanned for potential threats and 
+                                    when found they are blocked. 
+                                    </p>
+                            </ul>
+
+                        
+                    </div>
+                </div>
+            </div>
+        <!/div>
+        </div>
+
+    {% endblock %}
+</body>
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

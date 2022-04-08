@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static '/css/homepage.css' %}">
+    </head>
+{% endblock %}
+
+{% block content %}
+    <body>
+        <div class="article" id="homepageText" >
+            <h1><br>Welcome to Cyber Security Explained!<br></h1>
+        </div>
+
+        <div id="homepageParagraph"> 
+            <p><br><br>This website is dedicated to introducing the topic of cyber security.
+                As such you'll see our navigation bar has distinct sections to break down the topic
+                into it's main components. Cyber security is a large field of study which constantly evolves
+                and changes, and while learning it is daunting to begin with the information here will arm you 
+                with all you need to keep up.<br><br>
+            </p>
+        </div>
+        <div>
+            <iframe src="https://threatmap.checkpoint.com/" style="border-color:white; margin: 0 auto; display:block; width:50%; height:600px; overflow:auto;">
+          
+            </iframe>
+        </div>
+        <p style="margin: 0; display:block; text-align:center;"><br>&#8593;<br>Above is an active map of cyber attacks.</p>
+    </body>
+{% endblock %}

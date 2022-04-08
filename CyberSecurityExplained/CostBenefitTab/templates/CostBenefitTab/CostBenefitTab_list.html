@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <title>Cost/Benefit</title>
+        <link rel="stylesheet" href="{% static '/css/costBenefit.css' %}">
+         <link rel="stylesheet" href="{% static '/css/homepage.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+{% endblock %}
+
+{% block content %}
+    <body>
+
+        <!--button class="collapsible">!Insider Threats</button>
+            <div class="colcontent"-->
+        <div class="cost">
+        <div class="title">
+            <br>
+            </br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>Costs of Attacks </h3>
+                            <p>
+                                Companies lost $1 trillion dollars in 2020 from cyber attacks. 
+                                These numbers have been increasing since 2018. Let’s break down 
+                                the numbers to what a single company loses in one year. These are 
+                                average numbers, and each company may experience something different. 
+                                A larger company tends to lose more money than a smaller company. For 
+                                example, hackers can ask for more money from larger companies. Here is 
+                                what companies lost in 2020.
+                                <ul>
+                                <li>Companies with 1-49 employees lost an average of $24,000.</li>
+                                <li>Companies with 50-249 employees lost an average of $50,000.</li>
+                                <li>Companies with 250-999 employees lost an average of $133,000.</li>
+                                <li>Companies with 1000 or more employees lost an average of $504,000.</li>
+                                </ul>
+                
+                            <p>
+                        <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                        Having good Cyber Security can save companies a lot of money and is a must. With growing reliance on technology, 
+                        we can be sure the threat of attacks is at its highest. Companies need to ask themselves if they 
+                        want to pay now or pay later.</p>
+                    <div>
+                        <img src="{% static 'images/cost6.jpg' %}"
+                            width= 100%;
+                            height= 100%; >
+                    </div>
+                    <br>
+                    </br>
+
+
+                    </div>
+                    <div class="col">
+                        <h3>Costs of Security</h3>
+                            <p>
+                            The global 
+                            spending on cyber security in 2020 was $123 billion and is expected to go up. Of course, 
+                            each business spends a different amount, and each company needs to do a risk assessment.
+                            A study done by Deloitte and the Financial Services Information Sharing and Analysis Center 
+                            concluded that financial services use 10% of the IT budget on cyber security. This 10% is 
+                            only 0.2% to 0.9% of the company’s revenue. The President’s budget in 2019 spent 15 billion 
+                            on cyber security only 0.3% of the budget. Now, a more average cost of cyber security for 
+                            companies can be very different from a small business to a large business. On average a company will 
+                            spend 6% – 14% of the IT budget on cyber security. The IT budget is 3.2% on average for a 
+                            company of all sizes. So, if all companies spend 10% of their IT budgets on cyber security, 
+                            the estimated amount spent is the following. 
+                            <ul>
+                            <li>Large companies spend $2 million to $5 million per year.</li>
+                            <li>Medium size companies spend $500,000 to $2 million per year.</li>
+                            <li>Small companies spend $500,000 and less per year.</li>
+                            </ul>
+
+                          <p>
+                          <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                          Phishing is the most common cyber security attack.
+                          </p>
+                          
+    
+                    <br>
+                    </br>
+                        <h3>Risk Assessment</h3>
+                            <p>The best place to start is with a risk assessment so the company has an idea of 
+                            what kind of cyber security they should invest in. </p>
+                            <ul>
+                                <li>What are the companies’ priorities? </li>
+                                <li>How is data stored or collected?</li>
+                                <li>Does the company have vulnerabilities? </li>
+                                <li>Are there specific attacks the company is at risk for such as, human error or phishing? </li>
+                                <li>How damaging would it be to have a data leakage?</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

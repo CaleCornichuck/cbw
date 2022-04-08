@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <title>Networks - Wi-Fi Pineapple</title>
+        <link rel="stylesheet" href="{% static '/css/networks.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+{% endblock %}
+
+{% block content %}
+    <body>
+
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/Networks">Networks</a>
+            <a class="navlink" style="cursor:pointer;" href="{% url 'wireshark' %}">Wireshark</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'wifipine' %}">WifiPineapple</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;padding-top:10px" class="text-success" onclick="openNav()">&#9776;</a>
+
+         
+        <!--button class="collapsible">!Insider Threats</button>
+            <div class="colcontent"-->
+        <div class="WifiPineapple">
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                    <style>
+                    h3 {
+                        text-align: center;
+                    }
+                    </style>
+
+                    <h3>Wi-Fi Pineapple</h3>
+                        <p>A Wi-Fi Pineapple is a portable device created by Hak5 to perform pen tests and 
+                        audit network security. This device can help white hat hackers find vulnerabilities 
+                        in the network what black hat attackers can exploit.</p>
+                    
+                    <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                    White hat hackers are the ethical hackers. The good guys. 
+                    </p>
+
+                    <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                    Black hat attackers are the malicious hackers. The bad guys. 
+                    </p>
+
+                    <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                    Pen tests (penetration testing) is a cyber security technique also known as ethical hacking.
+                    </p>
+
+                    <div>
+                            <img src="{% static 'images/pine2.jpg' %}"
+                                width= 100%;
+                                height= 100%; >
+                    </div>
+
+                    </div>
+                    <div class="col">
+                    
+                    <h3>How the Wi-Fi Pineapple works.</h3>
+                        <p>The Pineapple is between a network and a user’s computer. The device is looking through 
+                        data that flows between the two. Information and data traveling back and forth from the 
+                        network to computer are interpreted by the pineapple’s controller using Wi-Fi. </p>
+
+                        <h3>Wi-Fi Pineapple MitM attacks</h3>
+                            <p>The Wi-Fi Pineapple can be used to conduct a man in the middle (MitM) attack 
+                            by using a rogue access point. The attacked intercepts and relays, without detection, 
+                            messages between two users in direct communication.</p>
+        
+                    <div>
+                            <img src="{% static 'images/pine.png' %}"
+                                width= 100%;
+                                height= 100%; >
+                    </div>
+                    <br>
+                    </br>
+
+                    <h3>Hacking!</h3>
+                        <p>The hackers can gain access to the user’s network and computer without detection. 
+                        The hacker can eavesdrop without the user noticing. The hacker can remain connected 
+                        even when the pineapple is physically removed using remote control through the 
+                        internet. All sensitive or confidential information shared can now be seen by the 
+                        hacker. The hacker can use any information they see for personal gain or malicious 
+                        intent. Make sure when ever using a computer the Wi-Fi connection is the intended 
+                        connection. </p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+    
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

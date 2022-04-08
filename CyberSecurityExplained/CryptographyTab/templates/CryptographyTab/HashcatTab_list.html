@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {%block title%}
+        
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/opsec.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;" href="/Cryptography">Cryptography</a>
+        
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="{% url 'hashcat' %}">Hashcat</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'john' %}">John-the-Ripper</a>
+        </div>
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+        <div class="Hashcat">
+            <div class="title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div><img src="{% static 'images/hash.png' %}"
+                                    width= 100%%;
+                                    height= 100%;/>
+                                </div>
+                            </div>
+                            </br>
+                            <h5>Hashcat</h5>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                Hashcat is a password recovery tool that uses hashes to decrypt data. While it is popular for testing security systems and recovering user information, many use it for more nefarious purposes, such as stealing passwords.
+                                It is an easily available tool that allows a user to brute force any passwords using hashes.
+                            </p>
+                            <br>
+                            <div class="row">
+                                <div><img src="{% static 'images/hash2.png' %}"
+                                    width= 100%%;
+                                    height= 100%;/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <br>
+                            <h5>How Hashcat Works</h5>
+                            <br>
+                            <p style="border:10px; border-style:inset; border-color:#002c04 ; padding: .5em; text-align:center">
+                                Hashcat uses the hashed password to compare to a table or dictionary it has to find and crack the password. There are many different ways it can do this, such as:
+                            </p>
+                            <ul>
+                                <li>Brute-Force Attacks</li>
+                                    <br>
+                                    <p>
+                                        When given a set number of characters, Hashcat iterates through every single combination of upper-case letters, lower-case letters, and numbers.
+                                        Brute-Force Attacks have since been replaced by Mask Attacks, which are almost the same, but are more specific, which reduces the amount of combinations used, and the time taken to find the password.
+                                    </p>
+                                    <br>
+                                <li>Dictionary Attacks</li>
+                                    <br>
+                                    <p>
+                                        Given a text file, Hashcat reads through every line, and tries each one as a password. It is another common way to guess passwords, and also very simple.
+                                    </p>
+                                    <br>
+                                <li>Combinator Attack</li>
+                                    <br>
+                                    <p>
+                                        Given a dictionary, Hashcat will concatenate each word to every other word, making a new list of password candidates. For example, if there are 3 words, such as pass, word, and cat, one of the candidates would be passcat.
+                                    </p>
+                                    <br>
+                                <li>Hybrid Attack</li>
+                                    <br>
+                                    <p>
+                                        A Hybrid Attack is a Combinator Attack, with one side a dictionary, while the other is a Brute-Force Attack. The Brute-Force password is combined with 
+                                        each word in the dictionary.
+                                    </p>
+                                    <br>
+                                <li>Association Attack</li>
+                                    <br>
+                                    <p>
+                                        Hashcat uses pieces of information that could have an influence on the password, such as a username, to attack a specific hash.
+                                    </p>
+                                    <br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    {% endblock %}
+</body>
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <head>
+        <title>Top Five</title>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static '/css/topfive.css' %}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+{% endblock %}
+
+{% block content %}
+    <body>
+        <div id="mySidenav" class="sidenav" style="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="navlink" style="cursor:pointer;background-color:#5cb85c;" href="/TopFive">The Top Five</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'phishing' %}">Phishing</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'mal/ransomware' %}">Mal/Ransomware</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'insider threats' %}">Insider Threats</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'ddos' %}">DDOS</a>
+            <a class="navlink" style="cursor:pointer" href="{% url 'iot/sql' %}">SQL/IOT</a>
+        </div>
+
+        <a style="font-size:30px;cursor:pointer;margin-left:0;" class="text-success" onclick="openNav()">&#9776;</a>
+        <br>
+        <br>
+        <div class="article" id="topfiveText" >
+            <h3>The Top Five</h3>
+        </div>
+        <br>
+        <div class="topfiveParagraph">
+            <p>This page goes over the top five cybersecurity attack vectors, which include:
+                <ul>
+                    <li>Phishing</li> -Fraudulent messages used to solicit information or compromise an organization.
+                    <li>Malware</li> -Software used to compromise a computer system or cause damage and disruption.
+                    <li>Insider Threats</li> -Malicious intent or activity from someone inside an organization with access to private information.
+                    <li>DDOS</li> -DDOS or Distributed Denial of Service attacks which focus on extreme disruption of network access.
+                    <li>IOT/SQL</li> -SQL is a type of code used for data management in applications, but can also be directed against applications. 
+                    IOT or Internet of Things, include the multitude of devices with access or connections to data or network communications.
+                </ul>
+            <br>
+            Just one of these attacks can be devastating, 
+            but are often used in combination drastically increasing the damage done to a target.
+            Click on the icon above to navigate through each one.
+            </p>
+        </div>
+    </body>
+{% endblock %}
+
+{% block script %}
+<script src="{% static '/js/topfive.js' %}"></script>
+{% endblock %}
+
+
